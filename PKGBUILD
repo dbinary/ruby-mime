@@ -11,12 +11,14 @@ makedepends=('ruby' 'ruby-rdoc')
 options=('!distcc' '!emptydirs')
 url="https://rubygems.org/gems/mime"
 source=("https://rubygems.org/downloads/${_gemname}-${pkgver}.gem"
-	"LICENSE"
+	"https://github.com/dbinary/ruby-mime/raw/main/LICENSE"
 	)
 sha512sums=('2fb3901979c6efeef9fed69d2c8523f77fda68503b86ccf3f932c8fffc1172cab964d9057c80b8fd0c354b7033bd2af1a9e599e7724a0b2e224a76cf68dd55fa'
 	'SKIP'
 	)
-noextract=("${_gemname}-${pkgver}.gem")
+noextract=("${_gemname}-${pkgver}.gem"
+	   "LICENSE"
+	  )
 
 package() {
   cd ${srcdir}
